@@ -28,7 +28,7 @@ if len(sys.argv) >= 4:
     longitude = sys.argv[3]
     if len(sys.argv) == 5:
         radius = sys.argv[4]
-    else:
+    elif len(sys.argv) > 5 :
         print("Error: Bad number of argumetns")
     print('Take '+city+' ['+latitude+','+longitude+'] to mesure lattency.\n' )
 elif len(sys.argv) == 2:
@@ -114,4 +114,4 @@ for ASN in probes_id_by_ASN.keys():
 with open('./data/'+city+'_data.json', 'w') as outfile:
     json.dump(results_by_ASN, outfile)
 
-print('The program ended successfully')
+print('\nThe program ended successfully')
