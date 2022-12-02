@@ -52,7 +52,7 @@ resp = requests.get(url)
 content = json.loads(resp.content)
 
 #Write city probes in a file 
-with open('./probes/'+city+'.json','w') as outfile:
+with open('./data/'+city+'.json','w') as outfile:
     json.dump(content, outfile)
 
 probes_id_by_ASN = {}

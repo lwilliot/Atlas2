@@ -7,6 +7,7 @@ f=open(path)
 data=json.load(f)
 ases=list(data.keys())
 nb_destination=len(data[ases[0]])
+remaining_destination=len(data[ases[0]])
 means=[]
 data_by_destination=[]
 leaderboard={}
@@ -14,8 +15,10 @@ leaderboard={}
 #clean the data compute means and format by destination
 def clear():
     global means
-    means=[]
+    global remaining_destination
     global data_by_destination
+
+    means=[]
     data_by_destination=[]
     to_clean=[]
     for dest in range(nb_destination):
@@ -39,14 +42,13 @@ def clear():
     for ind in to_clean:
         del(data_by_destination[ind-count])
         count+=1
-
-    return nb_destination-len(to_clean)
+    remaining_destination=nb_destination-len(to_clean)
 
 
 
 while(True):
-    destination=clear()
-    user_input=input("Rank will be calculated from pings on {} differents targets. Do you wanna try to increase the number of targets? (It could lower the quality of the data) (y/n): ".format(destination))
+    clear()
+    user_input=input("Rank will be calculated from pings on {} differents targets. Do you wanna try to increase the number of targets? (It could lower the quality of the data) (y/n): ".format(remaining_destination))
     if user_input =="y":
         threshhold-=0.1
         print(threshhold)
@@ -77,14 +79,22 @@ for i in range (len(data_by_destination)):
 for AS in ases:
     leaderboard[AS]=0
 
+count=1
 for dest in data_by_destination:
     point=len(ases)
     for AS in dest:
         leaderboard.update({AS:leaderboard[AS]+point})
         point-=1
+        if(count==remaining_destination):
+            leaderboard.update({AS:round((leaderboard[AS]/(remaining_destination*len(ases))),2)})
+    count+=1
+
+
 
 
 leaderboard=dict(sorted(leaderboard.items(), key=lambda item: item[1],reverse=True))
+
+
 
 print("\nRESULTS:")
 for item in leaderboard.items():
