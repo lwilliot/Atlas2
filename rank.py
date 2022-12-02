@@ -4,7 +4,7 @@ import sys
 
 #path=sys.argv[1]
 threshhold=0.8
-f=open('data/New-york.json')
+f=open('data/MX_Mexico_data.json')
 data=json.load(f)
 ases=list(data.keys())
 nb_destination=len(data[ases[0]])
@@ -25,8 +25,8 @@ for dest in range(nb_destination):
             count+=1
         else:
             count_mean +=1
-            acc+=data[AS][dest]  
-    if(count>=(int)(nb_destination*threshhold)):
+            acc+=data[AS][dest]
+    if(count>=(int)(len(ases)*threshhold)):
         to_clean.append(dest)
     else:
         means.append(acc/count_mean)
@@ -54,15 +54,14 @@ for AS in ases:
 
 for dest in data_by_destination:
     point=len(ases)
-    print(point)
-    print(dest)
     for AS in dest:
         leaderboard.update({AS:leaderboard[AS]+point})
         point-=1
 
 
 leaderboard=dict(sorted(leaderboard.items(), key=lambda item: item[1],reverse=True))
-print(leaderboard)
+for item in leaderboard.items():
+    print(item)
 
 
 
