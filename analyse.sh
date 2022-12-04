@@ -28,7 +28,7 @@ python3 rank.py Winnipeg
 python3 rank.py Mississauga
 python3 rank.py Brampton
 python3 rank.py Hamilton
-python3 rank.py Surrey
+
 
 
 #top 200-300 us

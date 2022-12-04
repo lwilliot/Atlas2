@@ -28,7 +28,6 @@ python3 City_data.py Winnipeg
 python3 City_data.py Mississauga
 python3 City_data.py Brampton
 python3 City_data.py Hamilton
-python3 City_data.py Surrey
 
 
 #top 200-300 us
