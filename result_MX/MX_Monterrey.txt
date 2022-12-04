@@ -1,0 +1,4 @@
+RESULTS:
+('Network Information Center Mexico', 0.73)
+('Television Internacional', 0.7)
+('Uninet S.A. de C.V.', 0.57)

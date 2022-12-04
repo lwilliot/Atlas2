@@ -1,0 +1,5 @@
+RESULTS:
+('Uninet S.A. de C.V.', 0.8)
+('Cablemas Telecomunicaciones SA de CV', 0.75)
+('UNIVERSIDAD AUTONOMA DE YUCATAN', 0.7)
+('RadioMovil Dipsa', 0.25)
