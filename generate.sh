@@ -19,11 +19,16 @@ python3 City_data.py Washington
 python3 City_data.py Detroit
 
 #top 10 canada
+python3 City_data.py Toronto
+python3 City_data.py Montreal
+python3 City_data.py Calgary
+python3 City_data.py Ottawa
 python3 City_data.py Edmonton
 python3 City_data.py Winnipeg
 python3 City_data.py Mississauga
 python3 City_data.py Brampton
 python3 City_data.py Hamilton
+python3 City_data.py Surrey
 
 
 #top 200-300 us
