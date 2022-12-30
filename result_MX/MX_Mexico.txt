@@ -1,0 +1,10 @@
+RESULTS:
+('NTL - Virgin Media Limited', 0.83)
+('Corporacion Universitaria para el Desarrollo de Internet', 0.72)
+('AS-CHOOPA', 0.66)
+('ZEN-ECN', 0.61)
+('TOTAL PLAY TELECOMUNICACIONES SA DE CV', 0.56)
+('AS-ANEXIA - ANEXIA Internetdienstleistungs GmbH', 0.47)
+('Universidad Nacional Autonoma de Mexico', 0.41)
+('Cablevision', 0.4)
+('Uninet S.A. de C.V.', 0.34)

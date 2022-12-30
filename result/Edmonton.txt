@@ -1,0 +1,4 @@
+RESULTS:
+('MCSNET', 0.841)
+('TELUS Communications', 0.589)
+('SPACEX-STARLINK', 0.248)
