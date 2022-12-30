@@ -18,6 +18,7 @@ import json
 import sys
 import time
 from statistics import mean
+import numpy as np
 
 radius = 100 
 
@@ -96,17 +97,18 @@ for ASN in probes_id_by_ASN.keys():
             url = url+str(prob)+","
         resp = json.loads(requests.get(url[:-1]).content)
 
-        acc = 0.0
         count = 0
+        RTTs=[]
         for result in resp:
             if(result == "error"):
                 error = True
                 break
-            acc = acc + result["avg"]
+            RTTs.append(result["avg"])
             count += 1
 
         if not error and count != 0 :
-            results_by_ASN[ASN].append(acc/count)
+            array=np.array(RTTs)
+            results_by_ASN[ASN].append(np.median(array))
         else:
             results_by_ASN[ASN].append(-1)
 
