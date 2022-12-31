@@ -53,7 +53,7 @@ while(True):
     
     if user_input == "y":
         threshhold -= 0.1
-        print(threshhold)
+        print("current threshold is {}".format(threshhold))
 
         if(threshhold<0.2):
             print("You can't increase the number of targets anymore")
