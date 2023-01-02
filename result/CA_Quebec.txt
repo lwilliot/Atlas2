@@ -1,6 +1,0 @@
-RESULTS:
-('TELUS Communications', 0.727)
-('MICROSOFT-CORP-MSN-AS-BLOCK', 0.574)
-('AS-COPR', 0.534)
-('BACOM', 0.52)
-('VIDEOTRON', 0.335)

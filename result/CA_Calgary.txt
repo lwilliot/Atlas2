@@ -1,6 +1,0 @@
-RESULTS:
-('AS-YYCIX-SVC', 0.986)
-('Q9-AS-CAL3', 0.706)
-('TELUS Communications', 0.557)
-('SHAW', 0.494)
-('PRIMARY-AS', 0.186)
