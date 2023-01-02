@@ -3,9 +3,9 @@ In this project, we use Ripe Atlas to sort the different ISPs that serve a city.
 
 As a short reminder, Ripe Atlas is a global network of probes that measure Internet connectivity and reachability, providing an unprecedented understanding of the state of the Internet in real time. There are about 12000 active probes on the planet. Most probes perform built-in measurements that are publicly avail- able, that’s what we used for this project.
 
-The full result are in the /result folder. We have also sort the result by country in the folders /result_CA, /result_US, /result_MX.
+We have sort the results that we already compute by country in the folders /result_CA, /result_US, /result_MX. By default the rank.py will output file in ./result and City_data in ./data.
 
-If you want to fetch and analyse the data by yourself you can use the generate.sh and analyse.sh script. However, we recommend not to do this because it is very long (several hours).
+If you want to fetch and analyse the data by yourself you can use the generate.sh and analyse.sh script. However, we recommend not to do this because it is very long (several hours). 
 
 To test by yourself we advise you to choose a city and to launch the python script for this city. Here are some examples of cities with their coordinates:
 
@@ -27,4 +27,4 @@ The python script to fetch data is City_data.py, it take variable number of inpu
 • 4 arguments: (string) Name,(float) latitude,(float) longitude, (int) radius in km
 
 It will write the data in a json file in the /data directory.
-To genearate the ranking you need to lanch the rank.py script with the name of the city as argument. 
+To generate the ranking you need to lanch the rank.py script with the name of the city as argument. 
